@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+
+:root {
+    --gold: #CDA34F;
+    --daisy: #E9E7DA;
+    --steam: #636B46;
+    --greenery: #373F27;
+}
+
+.default-typography{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paragraph-typography{
+    font-family: 'PT Serif', serif;
+}
+
+.gold{
+    color: var(--gold) !important;
+}
+
+.daisy{
+    color: var(--daisy) !important;
+}
+
+.greenery{
+    color: var(--greenery) !important;
+}
+.steam{
+    color: var(--steam) !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--steam) !important;
+}
+
+.nav-link:hover{
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.tickets-button{
+    margin-bottom: 50px;
+    width: 180px;
+    text-align: end;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--greenery);
+    border-top: 3px solid var(--greenery);
+}
+
+.icon-a {
+    color: var(--daisy) !important;
+    cursor: pointer;
+}
+
+.background-color {
+    background: var(--steam);
+}
+
+.footer-bottom-links-only {
+    width: 89%;
+    display: inline-block;
+    overflow: hidden;
+    max-height: 25px;
+}
+
+.text-align-footer-second{
+    text-align: center !important;
+}
+
+
+/* Media queries */
+
+
+@media screen and (min-width: 300px) {
+    .text-align-footer-third{
+        text-align: center !important;
+    }
+
+    .text-align-footer-first{
+        text-align: center !important;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .text-align-footer-third{
+        text-align: end !important;
+    }
+
+    .text-align-footer-first{
+        text-align: start !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.activeNavbar {
+
+    text-decoration: underline !important;
+}
+
+.list-inline-item > a:hover{
+    text-decoration: underline !important;
+}
+
+
+
+
+
+
