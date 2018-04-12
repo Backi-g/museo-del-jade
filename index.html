@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/variables.css">
 
+
 </head>
 
 <body ng-controller="NavCtrl">
 
     <!-- Navbar start -->
 
-    <nav class="navbar navbar-expand-md bg-secondary navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light" >
 
         <a class="navbar-brand" href="#"><img style="width: 150px;" src="src/images/logo.png" alt="Image text"></a>
 
@@ -90,8 +91,8 @@
 
 
         <div class="justify-content-lg-end  d-none d-md-block tickets-button" >
-            <button class=" btn btn-primary" >
-                <span class="default-typography small"> Boletería</span>
+            <button class=" btn btn-primary"  id="boleteria_btn">
+                <span class="small"> Boletería</span>
             </button>
 
             <span style="cursor: pointer">
@@ -138,10 +139,10 @@
                     </li>
                 </ul>
 
-                <p class=" paragraph-typography small steam">© 2018 Copyright Museo del Jade</p>
+                <p class=" default-typography small steam">© 2018 Copyright Museo del Jade</p>
             </div>
 
-            <div class="footer-bottom-links-only  col-md-5 col-sm-12 text-muted paragraph-typography mt-3 small d-none d-xl-block d-lg-block d-md-block text-align-footer-second">
+            <div class="footer-bottom-links-only  col-md-5 col-sm-12 text-muted default-typography mt-3 small d-none d-xl-block d-lg-block d-md-block text-align-footer-second">
                 <ul>
                     <li class="list-inline-item">
                         <a class="pointer steam"> Mapa del sitio </a>
@@ -159,15 +160,15 @@
 
             </div>
 
-            <div class="col-md-3 text-muted paragraph-typography mt-2 small  text-align-footer-third">
+            <div class="col-md-3 text-muted default-typography mt-2 small  text-align-footer-third">
                 <ul>
                     <li class="list-inline-item">
-                        <span class="pointer steam"> <i class="fa fa-phone fa-fw"></i> Contáctenos:(506)2521-6610 </span>
+                        <span class="pointer steam"> <i class="fa fa-phone fa-fw"></i> Contáctenos: (506)2521-6610 </span>
                     </li>
 
                     <li class="list-inline-item steam">
-                        <span class="pointer d-none d-xl-block d-lg-block d-md-block"> <i class="fa fa-location-arrow fa-fw"></i> Central Av., Street 13 and 13 bis, </span>
-                        <span class="pointer d-none d-xl-block d-lg-block d-md-block"> San José, Costa Rica </span>
+                        <span class="pointer d-none d-xl-block d-lg-block d-md-block" style="text-align: start; margin-right: 10px"> <i class="fa fa-location-arrow fa-fw"></i> Calle 13 y 13 bis, Av Central, </span>
+                        <span class="pointer d-none d-xl-block d-lg-block d-md-block" style="text-align: start; margin-left: 20px;"> San José, Costa Rica </span>
                     </li>
                 </ul>
 
