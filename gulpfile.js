@@ -8,4 +8,4 @@ gulp.task('css:compile', function() {
             outputStyle: 'expanded'
         }).on('error', sass.logError))
         .pipe(gulp.dest('./src/css'))
-});
+})

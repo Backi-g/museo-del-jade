@@ -21,10 +21,13 @@ body {
     --daisy: #E9E7DA;
     --steam: #636B46;
     --greenery: #373F27;
+    --jade:  #006837
 }
 
 .default-typography{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-style: normal;
+    font-size: 14px;
 }
 
 .paragraph-typography{
@@ -46,24 +49,49 @@ body {
     color: var(--steam) !important;
 }
 
+.jade{
+    color: var(--jade) !important;
+}
+
 .pointer {
     cursor: pointer;
 }
 
 .nav-link {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--steam) !important;
+    font-family: 'Montserrat-Regular', sans-serif;
+    color: #666666 !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: normal;
+    margin-right: 10px;
+
 }
 
 .nav-link:hover{
-    text-decoration: underline !important;
+    text-decoration: none !important;
     cursor: pointer;
+    /*text-decoration-color: var(--jade) !important;*/
+    border-bottom: 2px solid var(--jade);
 }
 
 .tickets-button{
-    margin-bottom: 50px;
-    width: 180px;
+    /*margin-bottom: 50px;*/
+    /*width: 180px;*/
     text-align: end;
+    margin-right: 15px;
+}
+
+#boleteria_btn{
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#boleteria_btn span{
+    font-family: 'Montserrat-Regular', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
 }
 
 
@@ -135,13 +163,18 @@ body {
 
 .activeNavbar {
 
-    text-decoration: underline !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid var(--jade);
 }
 
 .list-inline-item > a:hover{
     text-decoration: underline !important;
+    text-decoration-color: var(--jade) !important;
 }
 
+.navbar-nav{
+    margin-left: 25px;
+}
 
 
 
