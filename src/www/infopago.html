@@ -1,0 +1,131 @@
+<div ng-controller="InfoPagoCtrl">
+
+    <div class="container-style">
+        <h4>Información de pago</h4>
+
+        <div class="container-fluid row ">
+
+            <div class="col-md-4 ">
+
+                <div class="form-group">
+                    <label for="name" class="mt-2">Nombre completo *</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name">
+
+                    <label for="id" class="mt-2">Identificación *</label>
+                    <input type="text" class="form-control" id="id" aria-describedby="id">
+
+                    <label for="email" class="mt-2">Correo electrónico *</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email">
+
+                    <label for="phone" class="mt-2">Teléfono *</label>
+                    <input type="tel" class="form-control" id="phone" aria-describedby="phone">
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label for="card" class="mt-2">Número de tarjeta *</label>
+                    <input type="number" class="form-control" id="card" aria-describedby="card">
+
+                    <label for="cardType" class="mt-2">Tipo de tarjeta *</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="cardType">
+                        <option value="2">Débito</option>
+                        <option value="3">Crédito</option>
+                    </select>
+
+                    <div class="mt-2">
+                        <label >Fecha de vecimiento *</label>
+                        <form class="form-inline">
+
+                            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" style="width: 50%">
+                                <option value="01">Enero</option>
+                                <option value="02">Febrero </option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Mayo</option>
+                                <option value="06">Junio</option>
+                                <option value="07">Julio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Setiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            <select class="custom-select" style="width: 45%">
+                                <option value="16"> 2016</option>
+                                <option value="17"> 2017</option>
+                                <option value="18"> 2018</option>
+                                <option value="19"> 2019</option>
+                                <option value="20"> 2020</option>
+                                <option value="21"> 2021</option>
+                            </select>
+
+                        </form>
+                </div>
+
+            </div>
+
+                <form class="form-inline">
+                    <label  for="cvv">Código de seguridad *</label>
+                    <input type="number" class="form-control" id="cvv" aria-describedby="cvv" style="width: 90%">
+                    <a href="" style="margin-left: 5px" data-toggle="tooltip" data-placement="right" title="Código de 3 o 4 números situado en el reverso de la tarjeta">
+                        <i class="fa fa-question-circle fa-lg"> </i>
+                    </a>
+                </form>
+
+
+            </div>
+
+            <div class="col-md-4 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Información de compra</h5>
+
+                        <table class="table col-md-8 mt-2">
+                            <thead class="border-table">
+                            <tr >
+                                <th scope="col" class="default-typography">Tipo</th>
+                                <th scope="col" class="default-typography"></th>
+                                <th scope="col" class="default-typography"><a  href="#" id="updateBoleteria">Editar</a></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="m-5 small">Extranjeros</td>
+                                    <td class="m-5 small">$15 x 1</td>
+                                    <td class="m-5 small">
+                                        $15
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="card-text">Total $15</p>
+                        <div class="align-content-center">
+                            <button  class="btn btn-primary" style="width: 50%;" ng-click="submit()">Pagar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-check">
+
+                <input type="checkbox" class="form-check-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description small montserrat-typography">
+                    Acepto que he leído y comprendido las políticas de privacidad, términos y condiciones de uso de esta plataforma de compra en línea
+                    <a href="">
+                       (ver políticas, términos y condiciones)
+                    </a>
+                </span>
+
+        </div>
+
+
+    </div>
+</div>

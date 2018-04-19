@@ -1,2 +1,68 @@
-<div ng-controller="BoleteriaCtrl">
+<div ng-controller="BoleteriaCtrl" >
+
+
+    <div class="container-style">
+        <h4>Información General</h4>
+
+        <div class="container-fluid row ">
+
+            <table class="table col-md-8 mt-2">
+                <thead class="border-table">
+                <tr >
+                    <th scope="col" class="default-typography">Tipo</th>
+                    <th scope="col" class="default-typography">Precio</th>
+                    <th scope="col" class="default-typography">Cantidad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="m-5">Extranjeros</td>
+                    <td class="m-5">$15</td>
+                    <td class="spinnerInput">
+                        <input type="number"  value="0" min="0" max="10" step="1"  id="spin" onchange="updateInput(this.value)" oninput="updateInput(this.value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="m-5">Nacionales</td>
+                    <td class="m-5">$5</td>
+                    <td class="spinnerInput">
+                        <input type="number" value="0" min="0" max="10" step="1" >
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Horario</h5>
+                        <p class="card-text">Lunes a Domingo de 10am a 5pm</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container-fluid" style="margin-top: 5%">
+
+            <div class="total-container row">
+                <div class="col-md-10">
+                    <h5 class="montserrat-typography">Total  $15 </h5>
+                </div>
+
+
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-md" ng-click="loadPaymentInfo()" style="width: 100%">Pagar</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
 </div>

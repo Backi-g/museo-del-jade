@@ -79,7 +79,7 @@
 
 
                 <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
-                    <a class="nav-link">
+                    <a class="nav-link" ng-click="loadBoleteria()">
                         Boletería
                     </a>
                 </li>
@@ -91,7 +91,7 @@
 
 
         <div class="justify-content-lg-end  d-none d-md-block tickets-button" >
-            <button class=" btn btn-primary"  id="boleteria_btn">
+            <button class=" btn btn-primary"  id="boleteria_btn" ng-click="loadBoleteria()">
                 <span class="small"> Boletería</span>
             </button>
 
@@ -182,10 +182,12 @@
 
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="node_modules/angular1-ui-bootstrap4/dist/ui-bootstrap.js"></script>
+    <script src="src/js/InputSpinner.js"></script>
 
     <script>
         /* Este es el script para agregar funcionalidad en el index, lo puse aqui porque
@@ -204,6 +206,8 @@
     <script src="src/js/BoleteriaCtrl.js"></script>
     <script src="src/js/ElRecorridoCtrl.js"></script>
     <script src="src/js/ExhibicionesCtrl.js"></script>
+    <script src="src/js/InfoPagoCtrl.js"></script>
+    <script src="src/js/PagoExitosoCtrl.js"></script>
 
 </body>
 </html>

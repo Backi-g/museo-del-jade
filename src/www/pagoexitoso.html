@@ -1,0 +1,69 @@
+<div ng-controller="PagoExitosoCtrl">
+    <div class="container-style">
+        <h5 class="montserrat-typography">Tu compra se ha realizado con éxito  <i class="fa fa-check "> </i></h5>
+        <p class="montserrat-typography">Felicidades la compra de los boletos que ha solicitado ha sido exitosa</p>
+
+        <div class="container-fluid row ">
+
+            <table class="table col-md-8 mt-2">
+                <thead class="border-table">
+                <tr >
+                    <th scope="col" class="default-typography">Tipo</th>
+                    <th scope="col" class="default-typography">Precio</th>
+                    <th scope="col" class="default-typography">Cantidad</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="m-5 montserrat-typography">Extranjeros</td>
+                        <td class="m-5 montserrat-typography">$15</td>
+                        <td class="spinnerInput">
+                            <span class="default-typography">1</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="col-md-4">
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title montserrat-typography">Horario</h5>
+                        <p class="card-text montserrat-typography">Lunes a Domingo de 10am a 5pm</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid" style="margin-top: 5%">
+
+            <div class="total-container row">
+                <div class="col-md-10">
+                    <h5 class="montserrat-typography">Total  $15 </h5>
+                </div>
+
+
+                <div class="col-md-2">
+                    <span class="montserrat-typography">IVA incluido</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid row flex-row-reverse" style="width: 70%">
+            <div class=" mt-2" style="margin-left: 20px">
+                <button class="btn btn-primary btn-md float-right" ng-click="">Imprimir</button>
+            </div>
+
+            <div class="mt-2" >
+                <button class="btn btn-primary btn-md float-right" ng-click="loadHome()">Regresar</button>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
