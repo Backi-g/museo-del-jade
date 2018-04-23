@@ -1,8 +1,14 @@
-<div ng-controller="BoleteriaCtrl" >
-
+<div ng-controller="BoleteriaCtrl" class="pre-scrollable">
 
     <div class="container-style">
         <h4>Información General</h4>
+
+        <div class="card d-block d-md-none d-lg-none d-xl-none">
+            <div class="card-body">
+                <h5 class="card-title">Horario</h5>
+                <p class="card-text">Lunes a Domingo de 10am a 5pm</p>
+            </div>
+        </div>
 
         <div class="container-fluid row ">
 
@@ -19,21 +25,41 @@
                     <td class="m-5">Extranjeros</td>
                     <td class="m-5">$15</td>
                     <td class="spinnerInput">
-                        <input type="number"  value="0" min="0" max="10" step="1"  id="spin" onchange="updateInput(this.value)" oninput="updateInput(this.value)">
+                        <div class="col-xs-3 col-xs-offset-3">
+                            <div class="input-group number-spinner">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-outline-primary btn-extranjeros" data-dir="dwn"><span class="fa fa-minus"></span></button>
+                                </span>
+                                <input type="text" class="form-control text-center" ng-model="extranjeros">
+                                <span class="input-group-btn">
+					                <button class="btn btn-outline-primary btn-extranjeros" data-dir="up"><span class="fa fa-plus"></span></button>
+				                </span>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="m-5">Nacionales</td>
                     <td class="m-5">$5</td>
                     <td class="spinnerInput">
-                        <input type="number" value="0" min="0" max="10" step="1" >
+                        <div class="col-xs-3 col-xs-offset-3">
+                            <div class="input-group number-spinner">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-outline-primary btn-nacional" data-dir="dwn"><span class="fa fa-minus"></span></button>
+                                </span>
+                                <input type="text" class="form-control text-center"  ng-model="nacionales"  >
+                                <span class="input-group-btn">
+					                <button class="btn btn-outline-primary btn-nacional" data-dir="up"><span class="fa fa-plus"></span></button>
+				                </span>
+                            </div>
+                        </div>
                     </td>
                 </tr>
 
                 </tbody>
             </table>
 
-            <div class="col-md-4">
+            <div class="col-md-4 d-none d-md-block">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Horario</h5>
@@ -44,12 +70,11 @@
 
         </div>
 
-
         <div class="container-fluid" style="margin-top: 5%">
 
             <div class="total-container row">
                 <div class="col-md-10">
-                    <h5 class="montserrat-typography">Total  $15 </h5>
+                    <h5 class="montserrat-typography">Total $ {{total}} </h5>
                 </div>
 
 

@@ -1,46 +1,65 @@
-angular.module('app').controller('BoleteriaCtrl', [ '$scope', '$compile', '$location', function($scope, $compile, $location) {
+angular.module('app').controller('BoleteriaCtrl', [ '$scope', '$compile', '$location', 'BoleteriaService', function($scope, $compile, $location, BoleteriaService) {
 
-    $scope.nacionales = 10;
-    $scope.extranjeros = 8;
-    $scope.mySpinners = [];
-
-    $("input[type='number']").InputSpinner();
-
-    // document.getElementById('spinner2').addEventListener('change', function (evt) {
-    //     console.log("viene");
-    //     console.log(this.value);
-    // });
-
-    // var spinners = document.getElementsByClassName('spinners');
-    //
-    // angular.forEach(spinners, function (value,key) {
-    //
-    //     $scope.mySpinners.push(value) ;
-    //
-    // })
-    //
-    // console.log($scope.mySpinners.length);
-    //
-    // $scope.jsFunction = function () {
-    //     console.log("ajaaa");
-    // }
-
-    // $( ".spinners" ).change(function() {
-    //     alert( "Handler for .change() called." );
-    // });
-    //
-    // console.log(document.getElementById('spin').value);
-
-
-     // $scope.mySpinners[0].addEventListener('onchange', $scope.jsFunction, false)
-
-    $scope.updateInput = function (val) {
-        console.log("hizo click");
-        console.log(val);
-    };
+    $scope.total = BoleteriaService.getTotal();
+    $scope.nacionales = BoleteriaService.getNacionales();
+    $scope.extranjeros = BoleteriaService.getExtranjeros();
 
     $scope.loadPaymentInfo = function () {
         $location.url('/infopago');
+    };
+
+
+    $(document).on('click', '.btn-nacional ', function () {
+        var btn = $(this),
+            oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+            newVal = 0;
+
+        if (btn.attr('data-dir') == 'up') {
+            newVal = parseInt(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                newVal = parseInt(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        btn.closest('.number-spinner').find('input').val(newVal);
+
+        $scope.nacionales = newVal;
+        BoleteriaService.setNacionales($scope.nacionales);
+
+        calcularTotal();
+
+    });
+
+
+    $(document).on('click', '.btn-extranjeros ', function () {
+        var btn = $(this),
+            oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+            newVal = 0;
+
+        if (btn.attr('data-dir') == 'up') {
+            newVal = parseInt(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                newVal = parseInt(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        btn.closest('.number-spinner').find('input').val(newVal);
+
+        $scope.extranjeros = newVal;
+        BoleteriaService.setExtranjeros($scope.extranjeros);
+
+        calcularTotal();
+
+    });
+
+    function calcularTotal() {
+        $scope.total = ($scope.nacionales * 5) + ($scope.extranjeros * 15);
+        BoleteriaService.setTotal($scope.total);
+        $scope.$apply();
     };
 
 

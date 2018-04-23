@@ -1,7 +1,10 @@
-<div ng-controller="PagoExitosoCtrl">
+<div ng-controller="PagoExitosoCtrl" class="pre-scrollable">
     <div class="container-style">
-        <h5 class="montserrat-typography">Tu compra se ha realizado con éxito  <i class="fa fa-check "> </i></h5>
-        <p class="montserrat-typography">Felicidades la compra de los boletos que ha solicitado ha sido exitosa</p>
+
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading montserrat-typography">Tu compra se ha realizado con éxito  <i class="fa fa-check "> </i></h4>
+            <p class="montserrat-typography">Felicidades la compra de los boletos que ha solicitado ha sido exitosa</p>
+        </div>
 
         <div class="container-fluid row ">
 
@@ -14,11 +17,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr ng-if="extranjeros > 0">
                         <td class="m-5 montserrat-typography">Extranjeros</td>
                         <td class="m-5 montserrat-typography">$15</td>
                         <td class="spinnerInput">
-                            <span class="default-typography">1</span>
+                            <span class="default-typography">{{extranjeros}}</span>
+                        </td>
+                    </tr>
+
+                    <tr ng-if="nacionales > 0">
+                        <td class="m-5 montserrat-typography">Nacionales</td>
+                        <td class="m-5 montserrat-typography">$5</td>
+                        <td class="spinnerInput">
+                            <span class="default-typography">{{nacionales}}</span>
                         </td>
                     </tr>
                 </tbody>
@@ -41,7 +52,7 @@
 
             <div class="total-container row">
                 <div class="col-md-10">
-                    <h5 class="montserrat-typography">Total  $15 </h5>
+                    <h5 class="montserrat-typography">Total  ${{total}} </h5>
                 </div>
 
 
