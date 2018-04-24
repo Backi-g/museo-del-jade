@@ -30,6 +30,12 @@ body {
     font-size: 14px;
 }
 
+.montserrat-typography{
+    font-family: 'Montserrat-Regular', sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+}
+
 .paragraph-typography{
     font-family: 'PT Serif', serif;
 }
@@ -147,6 +153,10 @@ body {
         text-align: start !important;
     }
 
+    .spinnerInput{
+        width: 150px !important;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -175,6 +185,59 @@ body {
 .navbar-nav{
     margin-left: 25px;
 }
+
+.horario-container{
+    border: 2px solid #E2E2E2;
+    width: 70%;
+    padding: 15px;
+    margin: 10px;
+}
+
+.total-container{
+    border: 2px solid #E2E2E2;
+    width: 70%;
+    padding: 15px;
+}
+
+.border-table{
+    border-bottom: 3px solid var(--greenery) !important;
+}
+
+.container-style{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-block {
+    float:none;
+}
+
+.pre-scrollable{
+    max-height: 450px !important;
+    overflow-y: scroll;
+}
+
+[data-toggle="collapse"] .fa:before {
+    content: "\f139" ;
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f13a";
+}
+
+/*[data-toggle="collapse"] .mySpan:before {*/
+    /*content: "Ocultar detalles" ;*/
+/*}*/
+
+/*[data-toggle="collapse"].collapsed .mySpan:before {*/
+    /*content: "Mostrar detalles";*/
+/*}*/
+
+/*.horario .card{*/
+    /*background: var(--daisy);*/
+
+/*}*/
 
 
 
