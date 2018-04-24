@@ -17,6 +17,11 @@ angular.module('app', [
             templateUrl:    '/museo-del-jade/src/www/exhibiciones.html',
             controllerUrl:  '/museo-del-jade/src/js/ExhibicionesCtrl.js'
         });
+    $routeProvider.when('/detalleExhibiciones',
+        {
+            templateUrl:    '/museo-del-jade/src/www/detalleExhibiciones.html',
+            controllerUrl:  '/museo-del-jade/src/js/ExhibicionesCtrl.js'
+        });
     $routeProvider.when('/elrecorrido',
         {
             templateUrl:    '/museo-del-jade/src/www/elrecorrido.html',
@@ -36,7 +41,6 @@ angular.module('app', [
     );
 
 });
-
 
 
 

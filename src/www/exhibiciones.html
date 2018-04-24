@@ -1,3 +1,22 @@
-<div ng-controller="ExhibicionesCtrl">
-    Exhibiciones Navigation panel.
+<div ng-controller="ExhibicionesCtrl" >
+    <H4>{{tituloPagina}}</H4>
+    <p>Buscar: <input type="text" ng-model="search"></p>
+
+    <div class="row"  >
+        <div class="col container-style" ng-repeat="x in exhibList | filter : search" >
+            <div class="row">
+                <div class="col"><h5>{{ x.nombre }}</h5></div><div class="col"> <p>{{x.tipo}}</p></div>
+                <div>
+                    <img ng-src="src\images\Exhibiciones\{{x.pics[0]}}" height="150" width="400" ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics) ">
+
+                </div>
+                <p class="default-typography" >{{x.intro}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            Suscribirse: <input type="text">
+        </div>
+    </div>
 </div>
