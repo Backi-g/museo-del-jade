@@ -30,6 +30,12 @@ body {
     font-size: 14px;
 }
 
+.montserrat-typography{
+    font-family: 'Montserrat-Regular', sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+}
+
 .paragraph-typography{
     font-family: 'PT Serif', serif;
 }
@@ -135,10 +141,9 @@ body {
     .text-align-footer-first{
         text-align: center !important;
     }
-    img {
+    img.imgPlantas {
         width: 350px;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -149,11 +154,8 @@ body {
     .text-align-footer-first{
         text-align: start !important;
     }
-       img {
-        width: 350px;
-    }
-    .col-md-4 {
-        width: 90%;
+    .spinnerInput{
+        width: 150px !important;
     }
 }
 
@@ -166,12 +168,6 @@ body {
 
     .navbar .navbar-collapse {
         text-align: center;
-    }
-    img {
-        width: 350px;
-    }
-    .col-md-4 {
-    width: 90%;
     }
 }
 
@@ -217,9 +213,6 @@ body {
 }
 /* lg */
 @media (min-width: 1200px) {
-    img {
-        width: 350px;
-    }
     img.imgPlantas{
         height: 410px;
         width: 410px;
@@ -313,4 +306,104 @@ div #colThumbnail{
     margin-right: auto;
     width: 90%;
     margin-bottom: 20px;
+}
+.horario-container{
+    border: 2px solid #E2E2E2;
+    width: 70%;
+    padding: 15px;
+    margin: 10px;
+}
+
+.total-container{
+    border: 2px solid #E2E2E2;
+    width: 70%;
+    padding: 15px;
+}
+
+.border-table{
+    border-bottom: 3px solid var(--greenery) !important;
+}
+
+.container-style{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-block {
+    float:none;
+}
+
+.pre-scrollable{
+    max-height: 450px !important;
+    overflow-y: scroll;
+}
+
+[data-toggle="collapse"] .fa:before {
+    content: "\f139" ;
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f13a";
+}
+
+#infomuseo {
+    background-color: var(--greenery);
+    padding: 100px;
+}
+
+.services {
+    padding-top: 25px;
+    font-family: Montserrat-Regular;
+    color: #fff;
+    text-align: center;
+}
+
+#infomuseo img {
+    display: block;
+    margin: auto;
+}
+
+#suscribirse {
+    margin: 100px;
+    font-family: Montserrat-Regular;
+    text-align: center;
+}
+
+
+
+.subscribe_form {
+    font-family: Montserrat-Regular;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.subscribe_btn {
+    background-color: var(--gold);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.subscribe_form_input {
+    padding: 7px 30px;
+    border-radius: 25px;
+}
+
+.alert-text{
+    color: var(--steam) !important;
+}
+
+.btn-primary-set{
+    background-color: var(--gold);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.payment_button{
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 500;
+
 }
