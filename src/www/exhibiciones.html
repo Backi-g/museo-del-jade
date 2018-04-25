@@ -1,5 +1,5 @@
 <div ng-controller="ExhibicionesCtrl" >
-    <div class="container-style">
+    <div class="container">
         <H4 class="montserrat-typography">{{tituloPagina}}</H4>
         <div class="row m-3">
             <div class="col-md-4"></div>
@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container-style">
+    <div class="container">
         <div class="card-deck "  ng-if="exhibList">
             <div class="card" ng-repeat="x in exhibList | filter : search" ng-if="x.nombre">
                 <div class="card-header">

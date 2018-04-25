@@ -1,5 +1,4 @@
 angular.module('app').controller('DetalleExhibCtrl', ['$scope', '$compile', '$location', 'ExhibiService', function($scope, $compile, $location, ExhibiService) {
-    console.log('inside DetalleExhib controller');
     $scope.path = "src\images\Exhibiciones";
 
     $scope.exhib = ExhibiService.getExhibicion();
