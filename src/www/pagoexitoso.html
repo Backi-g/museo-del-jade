@@ -1,14 +1,14 @@
-<div ng-controller="PagoExitosoCtrl" class="pre-scrollable">
+<div ng-controller="PagoExitosoCtrl" class="container pre-scrollable">
     <div class="container-style">
 
         <div class="alert alert-secondary" role="alert">
-            <h4 class="alert-heading montserrat-typography">Tu compra se ha realizado con éxito  <i class="fa fa-check "> </i></h4>
-            <p class="montserrat-typography">Felicidades la compra de los boletos que ha solicitado ha sido exitosa</p>
+            <h4 class="alert-heading montserrat-typography alert-text">Tu compra se ha realizado con éxito  <i class="fa fa-check "> </i></h4>
+            <p class="montserrat-typography alert-text">Felicidades la compra de los boletos que ha solicitado ha sido exitosa</p>
         </div>
 
-        <div class="container-fluid row ">
+        <div class="container-fluid row" style="margin-top: 5%">
 
-            <table class="table col-md-8 mt-2">
+            <table class="table col-md-8 ">
                 <thead class="border-table">
                 <tr >
                     <th scope="col" class="default-typography">Tipo</th>
@@ -50,7 +50,7 @@
 
         <div class="container-fluid" style="margin-top: 5%">
 
-            <div class="total-container row">
+            <div class="total-container row col-md-8 mt-2">
                 <div class="col-md-10">
                     <h5 class="montserrat-typography">Total  ${{total}} </h5>
                 </div>
@@ -64,13 +64,13 @@
 
         </div>
 
-        <div class="container-fluid row flex-row-reverse" style="width: 70%">
-            <div class=" mt-2" style="margin-left: 20px">
-                <button class="btn btn-primary btn-md float-right" ng-click="">Imprimir</button>
+        <div class="container-fluid row flex-row-reverse col-md-8 mt-2">
+            <div  style="margin-left: 20px">
+                <button class="btn-primary-set payment_button" ng-click="">&nbsp;&nbsp;Imprimir&nbsp;&nbsp;</button>
             </div>
 
-            <div class="mt-2" >
-                <button class="btn btn-primary btn-md float-right" ng-click="loadHome()">Regresar</button>
+            <div >
+                <button class="btn-primary-set payment_button" ng-click="loadHome()">&nbsp;&nbsp;Regresar&nbsp;&nbsp;</button>
             </div>
         </div>
 
