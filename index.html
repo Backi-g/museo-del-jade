@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/variables.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
 </head>
 
-<body ng-controller="NavCtrl">
+<body ng-controller="NavCtrl" >
 
     <!-- Navbar start -->
 
@@ -79,7 +79,7 @@
 
 
                 <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
-                    <a class="nav-link">
+                    <a class="nav-link" ng-click="loadBoleteria()">
                         Boletería
                     </a>
                 </li>
@@ -91,7 +91,7 @@
 
 
         <div class="justify-content-lg-end  d-none d-md-block tickets-button" >
-            <button class=" btn btn-primary"  id="boleteria_btn">
+            <button class=" btn btn-primary"  id="boleteria_btn" ng-click="loadBoleteria()">
                 <span class="small"> Boletería</span>
             </button>
 
@@ -107,34 +107,34 @@
 
     <!-- View start -->
 
-    <div ng-view></div>
+    <div ng-view ></div>
 
     <!-- View End -->
 
     <!-- Footer start -->
 
-    <div class="footer mt-4">
+    <div class="footer">
         <div class="container-fluid row">
             <div class="col-md-4 mt-2 text-align-footer-first">
                 <ul>
                     <li class="list-inline-item">
-                        <a class="">
-                            <i class="fa fa-facebook-square fa-lg icon-a"> </i>
+                        <a class="" href="https://www.facebook.com/insmuseodeljade/">
+                            <i class="fab fa-facebook-f fa-lg icon-a"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="">
-                            <i class="fa fa-twitter-square fa-lg icon-a"> </i>
+                        <a class="" href="https://twitter.com/museodeljadecr?lang=es">
+                            <i class="fab fa-twitter fa-lg icon-a"> </i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="">
-                            <i class="fa fa-instagram fa-lg icon-a"> </i>
+                        <a class="" href="https://www.instagram.com/museodeljadecr/?utm_source=ig_embed&action=profilevisit">
+                            <i class="fab fa-instagram fa-lg icon-a"> </i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a>
-                            <i class="fa fa-youtube-square fa-lg icon-a"> </i>
+                        <a href="https://www.youtube.com/watch?v=UYOkV-dSNd0">
+                            <i class="fab fa-youtube fa-lg icon-a"> </i>
                         </a>
                     </li>
                 </ul>
@@ -182,6 +182,7 @@
 
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -201,9 +202,15 @@
     <script src="src/js/app.js"></script>
     <script src="src/js/NavCtrl.js"></script>
     <script src="src/js/HomeCtrl.js"></script>
+    <script src="src/js/services/BoleteriaService.js"></script>
     <script src="src/js/BoleteriaCtrl.js"></script>
     <script src="src/js/ElRecorridoCtrl.js"></script>
     <script src="src/js/ExhibicionesCtrl.js"></script>
+    <script src="src/js/ExhibiService.js"></script>
+    <script src="src/js/DetalleExhibCtrl.js"></script>
+    <script src="src/js/InfoPagoCtrl.js"></script>
+    <script src="src/js/PagoExitosoCtrl.js"></script>
+
 
 </body>
 </html>
