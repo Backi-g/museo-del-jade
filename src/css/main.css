@@ -226,7 +226,6 @@ body {
     content: "\f13a";
 }
 
-
 #infomuseo {
     background-color: var(--greenery);
     padding: 100px;
@@ -240,8 +239,8 @@ body {
 }
 
 #infomuseo img {
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
 
 #suscribirse {
@@ -269,4 +268,21 @@ body {
 .subscribe_form_input {
     padding: 7px 30px;
     border-radius: 25px;
+}
+
+.alert-text{
+    color: var(--steam) !important;
+}
+
+.btn-primary-set{
+    background-color: var(--gold);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.payment_button{
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 500;
+
 }
