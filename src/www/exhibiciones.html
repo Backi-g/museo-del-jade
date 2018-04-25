@@ -5,11 +5,11 @@
 
     <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4"><p>Buscar: <input type="text" ng-model="search" class="subscribe_form_input2"></p></div>
+        <div class="col-md-4"><p>Buscar: <input type="text" ng-model="search" class="subscribe_form_input"></p></div>
         <div class="col-md-4"></div>
     </div>
     <div class="container">
-        <div class="pre-scrollable">
+        <div class="pre-scrollable exhibiciones">
             <div class="row"  ng-if="exhibList">
             <div class="col container-style" ng-repeat="x in exhibList | filter : search" ng-if="x.nombre">
                 <div class="col-md-8">
@@ -25,7 +25,7 @@
                         <img ng-src="src\images\Exhibiciones\{{x.pics[0]}}" class="card-img-top" ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics)">
                         <div class="card-body">
                             <p class="card-text">{{x.intro}}</p>
-                            <a ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics)" class="btn btn-primary">ver más</a>
+                            <input type="button" class="subscribe_btn"value="Ver más" ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics)" >
                         </div>
                     </div>
                 </div>
@@ -35,12 +35,12 @@
     </div>
     <!-- Suscripciones-->
     <div class="container">
-        <form name="subscribe_form" method="post" action="" class="subscribe_form2">
+        <form name="subscribe_form" method="post" action="" class="subscribe_form">
             <h2>Suscribite</h2>
             <p> Ingresa tu email para recibir más información <br> acerca del museo, actidades y exposiciones</p>
 
-            <input type="email" class="subscribe_form_input2" name="subscribe" id="subscribe" placeholder="Email" required="">
-            <input type="submit" value="SUSCRIBIRSE" class="subscribe_btn2">
+            <input type="email" class="subscribe_form_input" name="subscribe" id="subscribe" placeholder="Email" required="">
+            <input type="submit" value="SUSCRIBIRSE" class="subscribe_btn">
         </form>
     </div>
 </div>
