@@ -1,4 +1,4 @@
-<div ng-controller="BoleteriaCtrl" class="pre-scrollable">
+<div ng-controller="BoleteriaCtrl" class="container pre-scrollable ">
 
     <div class="container-style">
         <h4>Información General</h4>
@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="container-fluid row ">
+        <div class="container-fluid row " style="margin-top: 5%">
 
             <table class="table col-md-8 mt-2">
                 <thead class="border-table">
@@ -70,16 +70,16 @@
 
         </div>
 
-        <div class="container-fluid" style="margin-top: 5%">
+        <div class="container-fluid " style="margin-top: 5%">
 
-            <div class="total-container row">
+            <div class="total-container row col-md-8 mt-2">
                 <div class="col-md-10">
                     <h5 class="montserrat-typography">Total $ {{total}} </h5>
                 </div>
 
 
                 <div class="col-md-2">
-                    <button class="btn btn-primary btn-md" ng-click="loadPaymentInfo()" style="width: 100%">Pagar</button>
+                    <button class="btn-primary-set payment_button" ng-click="loadPaymentInfo()" ng-disabled="total == 0">&nbsp;&nbsp;Pagar&nbsp;&nbsp;</button>
                 </div>
 
             </div>
@@ -87,7 +87,10 @@
         </div>
 
 
+
     </div>
+
+
 
 
 </div>

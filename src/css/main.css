@@ -226,18 +226,21 @@ body {
     content: "\f13a";
 }
 
-/*[data-toggle="collapse"] .mySpan:before {*/
-    /*content: "Ocultar detalles" ;*/
-/*}*/
+.alert-text{
+    color: var(--steam) !important;
+}
 
-/*[data-toggle="collapse"].collapsed .mySpan:before {*/
-    /*content: "Mostrar detalles";*/
-/*}*/
+.btn-primary-set{
+    background-color: var(--gold);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+}
 
-/*.horario .card{*/
-    /*background: var(--daisy);*/
-
-/*}*/
+.payment_button{
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 500;
+}
 
 
 
