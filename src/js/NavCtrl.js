@@ -16,4 +16,8 @@ angular.module('app').controller('NavCtrl', ['$scope', '$location', function ($s
         $location.url('/elrecorrido');
     };
 
+    $scope.loadBoleteria = function () {
+        $location.url('/boleteria');
+    };
+
 }]);
