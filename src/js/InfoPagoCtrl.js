@@ -22,7 +22,6 @@ angular.module('app').controller('InfoPagoCtrl', [ '$scope', '$compile', '$locat
 
             if (form.checkValidity() === true) {
 
-
                 if($scope.isSelected) {
                     $scope.isSelectedFirst = false;
                     $location.url('/pagoexitoso');

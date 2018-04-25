@@ -12,8 +12,10 @@ html {
 }
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
+    padding-bottom: 70px;
 }
+
 
 
 :root {
@@ -307,6 +309,7 @@ div #colThumbnail{
     width: 90%;
     margin-bottom: 20px;
 }
+
 .horario-container{
     border: 2px solid #E2E2E2;
     width: 70%;
@@ -405,5 +408,8 @@ div #colThumbnail{
 .payment_button{
     font-family: 'Montserrat-Regular', sans-serif;
     font-weight: 500;
+}
 
+.exhibiciones{
+padding-left:2%;
 }
