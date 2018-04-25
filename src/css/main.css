@@ -232,6 +232,50 @@ body {
     content: "\f13a";
 }
 
+#infomuseo {
+    background-color: var(--greenery);
+    padding: 100px;
+}
+
+.services {
+    padding-top: 25px;
+    font-family: Montserrat-Regular;
+    color: #fff;
+    text-align: center;
+}
+
+#infomuseo img {
+    display: block;
+    margin: auto;
+}
+
+#suscribirse {
+    margin: 100px;
+    font-family: Montserrat-Regular;
+    text-align: center;
+}
+
+
+
+.subscribe_form {
+    font-family: Montserrat-Regular;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.subscribe_btn {
+    background-color: var(--gold);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.subscribe_form_input {
+    padding: 7px 30px;
+    border-radius: 25px;
+}
+
 .alert-text{
     color: var(--steam) !important;
 }
@@ -260,5 +304,3 @@ body {
     padding: 7px 30px;
     border-radius: 25px;
 }
-
-
