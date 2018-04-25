@@ -1,22 +1,46 @@
 <div ng-controller="ExhibicionesCtrl" >
-    <H4>{{tituloPagina}}</H4>
-    <p>Buscar: <input type="text" ng-model="search"></p>
+    <div class="container">
+        <H4>{{tituloPagina}}</H4>
+    </div>
 
-    <div class="row"  >
-        <div class="col container-style" ng-repeat="x in exhibList | filter : search" >
-            <div class="row">
-                <div class="col"><h5>{{ x.nombre }}</h5></div><div class="col"> <p>{{x.tipo}}</p></div>
-                <div>
-                    <img ng-src="src\images\Exhibiciones\{{x.pics[0]}}" height="150" width="400" ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics) ">
-
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><p>Buscar: <input type="text" ng-model="search" class="subscribe_form_input2"></p></div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="container">
+        <div class="pre-scrollable">
+            <div class="row"  ng-if="exhibList">
+            <div class="col container-style" ng-repeat="x in exhibList | filter : search" ng-if="x.nombre">
+                <div class="col-md-8">
+                    <div class="card" style="width: 18rem;">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <h5 class="card-title">{{ x.nombre }}</h5>
+                            </div>
+                            <div class="col-md-6 ">
+                                <span>{{x.tipo}}</span>
+                            </div>
+                        </div>
+                        <img ng-src="src\images\Exhibiciones\{{x.pics[0]}}" class="card-img-top" ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics)">
+                        <div class="card-body">
+                            <p class="card-text">{{x.intro}}</p>
+                            <a ng-click="goToDetail(x.nombre,x.intro,x.descripcion,x.pics)" class="btn btn-primary">ver más</a>
+                        </div>
+                    </div>
                 </div>
-                <p class="default-typography" >{{x.intro}}</p>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            Suscribirse: <input type="text">
         </div>
+    </div>
+    <!-- Suscripciones-->
+    <div class="container">
+        <form name="subscribe_form" method="post" action="" class="subscribe_form2">
+            <h2>Suscribite</h2>
+            <p> Ingresa tu email para recibir más información <br> acerca del museo, actidades y exposiciones</p>
+
+            <input type="email" class="subscribe_form_input2" name="subscribe" id="subscribe" placeholder="Email" required="">
+            <input type="submit" value="SUSCRIBIRSE" class="subscribe_btn2">
+        </form>
     </div>
 </div>
