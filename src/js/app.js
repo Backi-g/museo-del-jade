@@ -33,6 +33,18 @@ angular.module('app', [
             templateUrl:    '/museo-del-jade/src/www/boleteria.html',
             controllerUrl:     '/museo-del-jade/src/js/BoleteriaCtrl.js'
         });
+
+    $routeProvider.when('/infopago',
+        {
+            templateUrl:    '/museo-del-jade/src/www/infopago.html',
+            controllerUrl:     '/museo-del-jade/src/js/InfoPagoCtrl.js'
+        });
+
+    $routeProvider.when('/pagoexitoso',
+        {
+            templateUrl:    '/museo-del-jade/src/www/pagoexitoso.html',
+            controllerUrl:     '/museo-del-jade/src/js/PagoExitosoCtrl.js'
+        });
     $routeProvider.otherwise(
         {
             redirectTo:     '/home',

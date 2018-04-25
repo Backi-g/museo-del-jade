@@ -1,0 +1,80 @@
+<div ng-controller="PagoExitosoCtrl" class="container pre-scrollable">
+    <div class="container-style">
+
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="alert-heading montserrat-typography alert-text">Tu compra se ha realizado con éxito  <i class="fa fa-check "> </i></h4>
+            <p class="montserrat-typography alert-text">Felicidades la compra de los boletos que ha solicitado ha sido exitosa</p>
+        </div>
+
+        <div class="container-fluid row" style="margin-top: 5%">
+
+            <table class="table col-md-8 ">
+                <thead class="border-table">
+                <tr >
+                    <th scope="col" class="default-typography">Tipo</th>
+                    <th scope="col" class="default-typography">Precio</th>
+                    <th scope="col" class="default-typography">Cantidad</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-if="extranjeros > 0">
+                        <td class="m-5 montserrat-typography">Extranjeros</td>
+                        <td class="m-5 montserrat-typography">$15</td>
+                        <td class="spinnerInput">
+                            <span class="default-typography">{{extranjeros}}</span>
+                        </td>
+                    </tr>
+
+                    <tr ng-if="nacionales > 0">
+                        <td class="m-5 montserrat-typography">Nacionales</td>
+                        <td class="m-5 montserrat-typography">$5</td>
+                        <td class="spinnerInput">
+                            <span class="default-typography">{{nacionales}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="col-md-4">
+
+                <div class="card d-none d-md-block" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title montserrat-typography">Horario</h5>
+                        <p class="card-text montserrat-typography">Lunes a Domingo de 10am a 5pm</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid" style="margin-top: 5%">
+
+            <div class="total-container row col-md-8 mt-2">
+                <div class="col-md-10">
+                    <h5 class="montserrat-typography">Total  ${{total}} </h5>
+                </div>
+
+
+                <div class="col-md-2">
+                    <span class="montserrat-typography">IVA incluido</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid row flex-row-reverse col-md-8 mt-2">
+            <div  style="margin-left: 20px">
+                <button class="btn-primary-set payment_button" ng-click="">&nbsp;&nbsp;Imprimir&nbsp;&nbsp;</button>
+            </div>
+
+            <div >
+                <button class="btn-primary-set payment_button" ng-click="loadHome()">&nbsp;&nbsp;Regresar&nbsp;&nbsp;</button>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
