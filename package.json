@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "description": "Pagina web del museo del jade",
   "main": "gulpfile.js",
-  "scripts": {
-    "start": "node app.js",
-    "postinstall": "bower install"
-  },
   "engines": {
     "node": "6.11.3"
   },
   "author": "Gabriela Gutiérrez",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "^1.6.10",
     "angular1-ui-bootstrap4": "^2.4.22",
+    "bootstrap": "^4.1.0",
+    "font-awesome": "^4.7.0",
     "gulp-sass": "^4.0.0",
+    "jquery": "^3.3.1",
     "ui-bootstrap4": "^3.0.3"
   }
-
 }
