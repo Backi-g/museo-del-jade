@@ -4,7 +4,8 @@
   "description": "Pagina web del museo del jade",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "postinstall": "bower install"
   },
   "engines": {
     "node": "6.11.3"
@@ -16,4 +17,5 @@
     "gulp-sass": "^4.0.0",
     "ui-bootstrap4": "^3.0.3"
   }
+
 }
